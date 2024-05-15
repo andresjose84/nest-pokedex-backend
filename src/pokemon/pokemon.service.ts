@@ -26,6 +26,15 @@ export class PokemonService {
 
   }
 
+  async createMany ( pokemons: Pokemon[] ) {
+    try {
+      const pokemon = await this.pokemonModel.insertMany( pokemons );
+      return pokemon;
+    } catch ( error ) {
+      this.handleExceptions( error );
+    }
+  }
+
   findAll () {
     return `This action returns all pokemon`;
   }
@@ -80,6 +89,11 @@ export class PokemonService {
       throw new BadRequestException( `Pokemon with id "${ id }" not found.` )
     }
 
+    return;
+  }
+
+  async removeAll () {
+    await this.pokemonModel.deleteMany( {} );
     return;
   }
 
