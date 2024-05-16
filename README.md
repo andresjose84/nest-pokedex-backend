@@ -28,6 +28,7 @@ docker-compose up -d
 6. LLenar las varibles de entorno definidas en el ```.env```
 
 7. Ejecutar la aplicacion en dev:
+
 ```
 yarn run start:dev
 ```
@@ -38,8 +39,17 @@ yarn run start:dev
 http://localhost:3000/api/v2/seed
 ```
 
-
 ## Stack usado
 
 * MongoDb 5
 * Nest
+
+## Production Build
+
+1. Crear el archivo ```.env.prod```
+2. Llenar las variables de entorno de prod
+3. Crear la nueva imagen
+
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
