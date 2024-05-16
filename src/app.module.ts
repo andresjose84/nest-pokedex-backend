@@ -15,7 +15,7 @@ import { JoiValidationSchema } from './config/joi.validation';
   imports: [
     ConfigModule.forRoot( {
       load: [ EnvConfiguration ],
-      validationSchema : JoiValidationSchema
+      validationSchema: JoiValidationSchema
     } ),
 
     ServeStaticModule.forRoot( {
@@ -23,7 +23,7 @@ import { JoiValidationSchema } from './config/joi.validation';
     } ),
 
     MongooseModule.forRoot( process.env.MONGODB, {
-      dbName : 'nest-pokemon'
+      dbName: 'nest-pokemon'
     } ),
 
     PokemonModule,
@@ -34,5 +34,8 @@ import { JoiValidationSchema } from './config/joi.validation';
   ],
 } )
 export class AppModule {
-  constructor() { }
+  constructor() {
+    console.log( 'ENV', process.env );
+
+  }
 }
