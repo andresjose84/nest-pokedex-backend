@@ -37,3 +37,5 @@ lerna-debug.log*
 mongodb_data
 .vscode
 .env
+.env.prod
+.env.dev

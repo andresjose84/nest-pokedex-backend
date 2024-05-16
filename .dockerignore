@@ -1,0 +1,7 @@
+
+mongodb_data/
+node_modules/
+dist/
+.vscode/
+.git/
+.gitignore
