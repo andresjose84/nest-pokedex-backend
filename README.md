@@ -32,7 +32,7 @@ docker-compose up -d
 yarn run start:dev
 ```
 
-6. Reconstruir la base de datos
+8. Reconstruir la base de datos
 
 ```
 http://localhost:3000/api/v2/seed
